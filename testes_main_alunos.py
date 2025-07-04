@@ -53,9 +53,11 @@ class TestCalculadora(unittest.TestCase):
         
 
         # Teste operador inválido - fazer três testes para todas as versões
-        self.assertTrue(math.isnan(calculadora(2, 3, '$')))
-        self.assertTrue(math.isnan(calculadora(2, 5, '#')))
-        self.assertTrue(math.isnan(calculadora(0, 2, 'qwe')))
+        self.assertTrue(math.isnan(calculadora_v2(5, 0, '/')))
+        self.assertTrue(math.isnan(calculadora_v2(5, 0, '%')))
+        self.assertTrue(math.isnan(calculadora_v2(2, 3, '$')))
+        self.assertTrue(math.isnan(calculadora_v2(2, 5, '#')))
+        self.assertTrue(math.isnan(calculadora_v2(0, 2, 'qwe')))
 
         # Teste números de virgula flutuante - fazer três testes para todas as versões
         self.assertAlmostEqual(calculadora(2.5, 1.5, '+'), 4.0)
