@@ -47,6 +47,10 @@ class TestCalculadora(unittest.TestCase):
         # Teste divisão por zero operador para todas versões / %
         self.assertTrue(math.isnan(calculadora(5, 0, '/')))
         self.assertTrue(math.isnan(calculadora(5, 0, '%')))
+        self.assertTrue(math.isnan(calculadora(2, 3, '$')))
+        self.assertTrue(math.isnan(calculadora(2, 5, '#')))
+        self.assertTrue(math.isnan(calculadora(0, 2, 'qwe')))
+        
 
         # Teste operador inválido - fazer três testes para todas as versões
         self.assertTrue(math.isnan(calculadora(2, 3, '$')))
